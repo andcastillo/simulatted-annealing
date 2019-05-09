@@ -1,0 +1,62 @@
+{
+  "name": "ml-simulated-annealing",
+  "version": "0.0.1",
+  "description": "Metaheuristic optimization method",
+  "main": "./src/index.js",
+  "files": [
+    "runkit.js",
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "test": "npm run test-simple && npm run eslint",
+    "test-travis": "jest --coverage && codecov",
+    "test-simple": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mljs/simulated-annealing.git"
+  },
+  "keywords": [
+    "simulated",
+    "annealing",
+    "metaheuristic",
+    "optimization",
+    "machine",
+    "learning",
+    "data",
+    "mining",
+    "datamining"
+  ],
+  "author": "Jhon Jairo Bohorquez",
+  "contributors": [
+    "Jose Alejandro Bolanos (jose.bolanos@correounivalle.edu.co)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mljs/simulated-annealing/issues"
+  },
+  "runkitExampleFilename": "./runkit.js",
+  "homepage": "https://github.com/mljs/simulated-annealing#readme",
+  "dependencies": {
+    "ml": "^3.5.0",
+    "ml-matrix": "^5.3.0",
+    "spectra-data": "3.4.8",
+    "nmr-predictor": "^1.2.0",
+    "nmr-simulation": "^1.0.19",
+    "openchemlib-extended": "6.0.0",
+    "nmr-auto-assignment": "^0.5.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "codecov": "^3.3.0",
+    "eslint": "^4.17.0",
+    "eslint-config-cheminfo": "^1.15.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.9.0",
+    "jest": "^24.7.0",
+    "jest-matcher-deep-close-to": "^1.2.1",
+    "mocha-better-spec-reporter": "^3.1.0"
+  }
+}
