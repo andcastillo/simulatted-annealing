@@ -67,6 +67,9 @@ async function autoassignSample(sample, predictor, options) {
         }
     );
 
+    ranges.sort((a, b) => b.from - a.from);
+
+
     return { ranges, assigner: result };
 }
 

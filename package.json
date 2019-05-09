@@ -31,7 +31,8 @@
   ],
   "author": "Jhon Jairo Bohorquez",
   "contributors": [
-    "Jose Alejandro Bolanos (jose.bolanos@correounivalle.edu.co)"
+    "Jose Alejandro Bolanos (jose.bolanos@correounivalle.edu.co)",
+    "andcastillo"
   ],
   "license": "MIT",
   "bugs": {
@@ -40,15 +41,16 @@
   "runkitExampleFilename": "./runkit.js",
   "homepage": "https://github.com/mljs/simulated-annealing#readme",
   "dependencies": {
-    "ml": "^3.5.0",
     "ml-matrix": "^5.3.0",
     "spectra-data": "3.4.8",
     "nmr-predictor": "^1.2.0",
     "nmr-simulation": "^1.0.19",
     "openchemlib-extended": "6.0.0",
-    "nmr-auto-assignment": "^0.5.0"
+    "nmr-auto-assignment": "^0.5.0",
+    "ml-fft": "^1.3.5"
   },
   "devDependencies": {
+    "ml-levenberg-marquardt": "^1.0.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "codecov": "^3.3.0",
     "eslint": "^4.17.0",
