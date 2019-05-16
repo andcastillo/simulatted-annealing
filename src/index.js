@@ -88,16 +88,16 @@ function candidateGenerator(lowerBound, upperBound, current, temperature, quienc
     let newCandidate = new Array(current.length);
     for (let i = 0; i < current.length; i++) {
         let range = upperBound[i] - lowerBound[i];
-        let dx = Math.random() * range *  Math.exp(- quienching / temperature);
+        let dx = (Math.random() - 0.5) * range *  Math.exp(- quienching / temperature);
         newCandidate[i] = current[i] + dx;
         if(newCandidate[i] < lowerBound[i]) {
-            newCandidate[i] =   lowerBound[i] + dx / 2; //Be sure it does not overload again
+            newCandidate[i] =   lowerBound[i] + Math.abs(dx / 2); //Be sure it does not overload again
         }
-        if(newCandidate[i] > lowerBound[i]) {
-            newCandidate[i] =  upperBound[i] - dx / 2; //Be sure it does not overload again
+        if(newCandidate[i] > upperBound[i]) {
+            newCandidate[i] =  upperBound[i] - Math.abs(dx / 2); //Be sure it does not overload again
         }
     }
-
+    //console.log(newCandidate);
     return newCandidate;
     //infoToTest.dx = dx;
     //infoToTest.parameters = newCandidate;
